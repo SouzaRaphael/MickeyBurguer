@@ -44,7 +44,7 @@ header .logo img {
   position: relative;
   width: 60px;
   height: 60px;
-  background: url(../Images/list.svg);
+  background: url(img/list.svg);
   background-repeat: no-repeat;
   background-size: 50px;
   background-position: center;
@@ -52,7 +52,7 @@ header .logo img {
 }
 
 .toggle.active {
-  background: url(../Images/x.svg);
+  background: url(img/x.svg);
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: center;
@@ -153,7 +153,7 @@ header .logo img {
 }
 
 .text a:after {
-  content: url(../Images/arrow-circle-right-duotone.svg);
+  content: url(img/arrow-circle-right-duotone.svg);
   position: absolute;
   display: flex;
   align-items: center;
