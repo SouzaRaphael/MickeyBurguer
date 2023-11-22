@@ -1,46 +1,357 @@
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="static/styles.css">
-    </head>
-    <body>
-        <section class="showcase">
-            <header>
-                <div class="logo">
-                    <img src="static/img/Logo_Mickey.png"/>
-                    <h2>Mickey Donalds</h2>
-                </div>
-                <div id="ademir">
-                    <button class="toggle"></button>
-                </div>
-            </header>
-            <img src="static/img/Mickey_Fundo.png" class="Fundo"/>
-            <div class="overlay"></div>
-            <div class="text">
-                <div>                
-                    <h2>O <span>melhor</span> restaurante</h2> 
-                    <h3>Com o seu personagem <span>favorito!</span></h3>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.</p>
-                <a href="#">Conheça nosso cardápio</a>
-            </div>
-            <ul class="social">
-                <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
-                <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
-                <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
-            </ul>
-        </section>
-        <div class="menu">
-            <ul>
-              <li><a href="#">Início</a></li>
-              <li><a href="#">Cardápio</a></li>
-              <li><a href="#">Restaurantes</a></li>
-              <li><a href="#">Contato</a></li>
-              <li><a href="static/files/app.zip" download>Baixar App</a></li>
-            </ul>
-        </div>
-    </body>
-    <script src="static/scripts.js"></script>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<title>Site Mickey</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<style type="text/css">
+		li {
+			list-style: none;
+		}
+
+		figure {
+			margin: 0;
+		}
+
+		#menu {
+			height: 100%;
+		}
+
+		#menu ul {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			list-style: none;
+			text-transform: uppercase;
+			position: center;
+		}
+
+		#menu li {
+			background-color: white;
+			padding: 10px;
+			margin: 5px;
+		}
+
+		#menu a {
+			font-size: larger;
+			color: #606060;
+		}
+
+		#menu a:hover {
+			color: darkred;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		#heropage {
+			display: flex;
+			align-items: end;
+			background-image: url('static/img/Design sem nome.png'); 
+			background-size: cover; 
+			background-repeat: no-repeat; 
+			width: 100%;
+		}
+
+		#herotxt {
+			margin: 100px 50px;
+			width: 65%;
+		}
+
+		h1, h4, p {
+			margin: 0;
+			color: white;
+		}
+
+		h1 {
+			font-size: 80px;
+		}
+
+		h4 {
+			font-size: 50px;
+		}
+
+		p {
+			padding: 10px 40px 30px 20px;
+			font-size: 20px;
+		}
+
+		#btn {
+			display: flex; 
+			justify-content: center; 
+			margin-top: -2.5rem;
+		}
+
+		button {
+			background-color: black;
+			border: black;
+			height: 70px;
+			border-radius: 50px;
+			transition: all 0.3s;
+		}
+
+		button:hover {
+			color: black;
+			background-color: white;
+			transform: scale(1.03);
+		}
+
+		button a{
+			padding: 0 15px;
+			font-size: x-large;
+			text-transform: uppercase;
+			color: white;
+			cursor: pointer;
+		}
+
+		button:hover a {
+			color: black;
+		}
+
+		.titulos {
+			display: flex;
+			justify-content: center;
+			padding: 10px 0;
+		}
+
+		.titulos h2 {
+			font-size: 55px;
+			font-weight: bold;
+		}
+
+		#social li a:hover {
+			transform: scale(0.5) translateY(-15px);
+		}
+
+		@media (max-width: 1500px){
+			#herotxt {
+				width: 90%;
+			}
+		}
+
+		@media (max-width: 1100px){
+			h1 {
+			font-size: 60px;
+			}
+
+			h4 {
+				font-size: 40px;
+			}
+
+			p {
+				padding: 10px 40px 30px 20px;
+				font-size: 20px;
+			}
+		}
+
+		@media (max-width: 850px){
+			#heropage{
+				align-items: center;
+				padding: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row" align="center">
+			<div class="col-md-2 col-lg-1">
+				<figure style="height: 100%;">
+					<img src="static/img/Logo.png" height="75px">
+				</figure>
+			</div>
+			<div class="col-md-9 col-lg-10" style="background-color: white;">
+				<nav id="menu">
+					<ul>
+						<li><a href=""><strong>Cardápio</strong></a></li>
+						<li><a href="Cadastro.html"><strong>Meu clube</strong></a></li>
+						<li><a href=""><strong>Restaurantes</strong></a></li>
+						<li><a href=""><strong>Carrinho</strong></a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-1 col-lg-1"></div>
+		</div>
+		<div class="row" style="height: 75vh;">
+			<div id="heropage">
+				<div id="herotxt">
+					<h1>
+						O<span style="color: red;"> MELHOR </span>RESTAURANTE
+					</h1>
+					<h4>
+						COM O SEU PERSONAGEM <span style="color: red;">FAVORITO!</span>
+					</h4>
+					<hr color="white">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4" id="btn">
+			<button>
+				<a href="#">Confira o nosso <span style="color: #82B2C2;">cardápio!!</span></a>
+			</button>
+		</div>
+		<div class="titulos">
+			<h2>Novidades</h2>
+		</div>
+		<div class="row" style="display: flex; justify-content: center; margin: 0px;">
+			<div class="col-md-4">
+				<div class="row" style="background-image: linear-gradient(#82B2C2, white);">
+					<div class="col-md-6 d-flex justify-content-center">
+						<img src="static/img/hamburguer-removebg-preview.png" style="margin: -25px 0 0 -10px;">
+					</div>
+					<div class="col-md-6" style="align-self: center;">
+						<p style="background-color: black; border-radius: 30px; margin-right: 10px; text-transform: uppercase; font-size: xx-large; font-weight: bolder; text-align: center; padding: 15px;">Aproveita essa <span style="color: #E63946;">delícia!!</span></p>
+					</div>
+				</div>
+				<div class="row" style="border-top: 1px solid lightgray;">
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-weight: bold; font-size: x-large; text-transform: uppercase; padding: 10px;">Atenção a nova <span style="color: #E63946;">tendência!!</span></p>
+					</div>
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-size: medium; padding: 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure neque vero harum, beatae fuga cumque sed ab tempora ipsum! Accusamus dolores minus odit vel dolorem error eligendi dolore rem ipsum.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-4">
+				<div class="row" style="background-image: linear-gradient(#E63946, white);">
+					<div class="col-md-6 d-flex justify-content-center">
+						<img src="static/img/Milkshake-removebg-preview.png" style="margin: -25px 0 0 -10px;">
+					</div>
+					<div class="col-md-6" style="align-self: center;">
+						<p style="background-color: black; border-radius: 30px; margin-right: 10px; text-transform: uppercase; font-size: xx-large; font-weight: bolder; text-align: center; padding: 15px;">Aproveita essa <span style="color: #82B2C2;">delícia!!</span></p>
+					</div>
+				</div>
+				<div class="row" style="border-top: 1px solid lightgray;">
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-weight: bold; font-size: x-large; text-transform: uppercase; padding: 10px;">Atenção a nova <span style="color: #82B2C2;">tendência!!</span></p>
+					</div>
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-size: medium; padding: 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure neque vero harum, beatae fuga cumque sed ab tempora ipsum! Accusamus dolores minus odit vel dolorem error eligendi dolore rem ipsum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="titulos">
+			<h2>Melhores Lanches</h2>
+		</div>
+		<div class="row" style="margin: 0px;">
+			<div class="col-md-1"></div>
+			<div class="col-md-2">
+				<div class="row" style="border-radius: 10px; background-image: linear-gradient(#F8A120, white);">
+					<div class="col-md-12 d-flex justify-content-center">
+						<img src="static/img/duplo.png" style="width: 100%; height: 100%;">
+					</div>
+				</div>
+				<div class="row" style="border-top: 1px solid lightgray;">
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-weight: bold; font-size: larger; text-transform: uppercase; padding: 4px 10px;">Ta querendo o <span style="color: #F8A120;">dobro?</span></p>
+					</div>
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-size: medium; padding: 4px 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure neque vero harum, beatae fuga cumque sed ab tempora ipsum!</p>
+					</div>
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-weight: bold; font-size: larger; text-transform: uppercase; padding: 4px 10px; color: #F8A120;">Saiba mais</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+			<div class="col-md-2">
+				<div class="row" style="border-radius: 10px; background-image: linear-gradient(#F8A120, white);">
+					<div class="col-md-12 d-flex justify-content-center">
+						<img src="static/img/duplo.png" style="width: 100%; height: 100%;">
+					</div>
+				</div>
+				<div class="row" style="border-top: 1px solid lightgray;">
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-weight: bold; font-size: larger; text-transform: uppercase; padding: 4px 10px;">Ta querendo o <span style="color: #F8A120;">dobro?</span></p>
+					</div>
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-size: medium; padding: 4px 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure neque vero harum, beatae fuga cumque sed ab tempora ipsum!</p>
+					</div>
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-weight: bold; font-size: larger; text-transform: uppercase; padding: 4px 10px; color: #F8A120;">Saiba mais</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+			<div class="col-md-2">
+				<div class="row" style="border-radius: 10px; background-image: linear-gradient(#F8A120, white);">
+					<div class="col-md-12 d-flex justify-content-center">
+						<img src="static/img/duplo.png" style="width: 100%; height: 100%;">
+					</div>
+				</div>
+				<div class="row" style="border-top: 1px solid lightgray;">
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-weight: bold; font-size: larger; text-transform: uppercase; padding: 4px 10px;">Ta querendo o <span style="color: #F8A120;">dobro?</span></p>
+					</div>
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-size: medium; padding: 4px 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure neque vero harum, beatae fuga cumque sed ab tempora ipsum!</p>
+					</div>
+					<div class="col-md-12">
+						<p style="color: black; text-align: center; font-weight: bold; font-size: larger; text-transform: uppercase; padding: 4px 10px; color: #F8A120;">Saiba mais</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row" style="background-color: #E63946;">
+			<div class="d-flex align-itens-end justify-content-center col-md-4">
+				<img src="static/img/Tela-removebg-preview.png">
+			</div>
+			<div class="col-md-8 p-5">
+				<h5 style="font-size: 80px; color: white; text-shadow: 5px 5px 5px rgb(61, 61, 61); text-transform: uppercase; margin-bottom: 50px;">
+					baixe agora o club mickey e coma muito!!
+				</h5>
+				<div class="d-flex justify-content-around">
+					<div class="d-flex justify-content-center col-md-4">
+						<a href="#">
+							<img src="static/img/playstore.png" height="75px" width="300px" style="border-radius: 10px;">
+						</a>
+					</div>
+					<div class="d-flex justify-content-center col-md-4">
+						<a href="#">
+							<img src="static/img/applestore.png" height="75px" width="300px" style="border-radius: 10px;">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="background-color: black;">
+			<div class="col-md-2 d-flex align-itens-center justify-content-center">
+				<ul class="d-flex m-0 p-0" id="social">					
+					<li class="d-flex"><a class="d-flex justify-content-center" style="filter: invert(1); transform: scale(0.5); transition: 0.5s; align-self: center;" href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+					<li class="d-flex"><a class="d-flex justify-content-center" style="filter: invert(1); transform: scale(0.5); transition: 0.5s; align-self: center;" href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+				</ul>
+			</div>
+			<div class="col-md-8 my-2">
+				<div class="d-flex justify-content-center mb-1">
+					<img src="static/img/Logo_branco.png">
+				</div>
+				<div class="d-flex justify-content-center">
+					<h6 class="p-0 m-0" style="color: white; text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, accusantium corporis sunt, delectus debitis maiores eligendi placeat praesentium voluptas asperiores reprehenderit numquam iure minima expedita dolore ipsum eveniet sapiente suscipit.</h6>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+</body>
 </html>
